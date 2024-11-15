@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Beauty</title>
+    <link rel="stylesheet" href="beranda.css">
+</head>
+
+<body>
+    <div class="sidebar closed" id="mySidebar">
+        <a href="Beranda.html">Beranda</a>
+        <a href="Produk.html">Produk</a>
+        <a href="contact.html">Contact</a>
+        <button class="login-btn"><a href="Login.html">Log In</a></button>
+    </div>
+
+    <button class="open-btn" onclick="toggleSidebar()">☰</button>
+
+    <div class="header-container">
+        <h2></h2>
+        <img src="img/LOGO KECANTIKAN_page-0001.jpg" alt="Logo Skincare Beauty">
+    </div>
+
+    <div class="container" id="container">
+        <header>
+            <h1>Alya Store</h1>
+        </header>
+        <h1>Tentang Toko Kami</h1>
+        <p>Selamat datang di toko kami, tempat di mana kecantikan bermula dan perawatan kulit menjadi ritual harian yang
+            menyenangkan</p>
+
+        <section class="grid-container">
+            <div class="grid-item">
+                <img src="img/produk 1.jpeg" alt="Product 1">
+                <h3>MS Glow White Series</h3>
+                <p>MS Glow White Series adalah rangkaian produk perawatan kulit yang dikembangkan oleh MS Glow</p>
+            </div>
+            <div class="grid-item">
+                <img src="img/tugas 2.jpeg" alt="Product 2">
+                <h3>Face Toner MS Glow</h3>
+                <p>Face Toner MS Glow adalah toner wajah yang diformulasikan untuk membantu menyegarkan, melembapkan, dan mengembalikan pH
+                kulit setelah pembersihan.</p>
+            </div>
+            <div class="grid-item">
+                <img src="img/produk 3.jpeg" alt="Product 3">
+                <h3>Lumiwhite Skincare</h3>
+                <p>Lumiwhite Skincare adalah rangkaian produk perawatan kulit yang dirancang untuk mencerahkan dan meratakan warna kulit
+                Anda.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Alya Store. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("mySidebar");
+            const container = document.getElementById("container");
+            const body = document.body;
+
+            if (sidebar.classList.contains("closed")) {
+                sidebar.classList.remove("closed");
+                container.style.marginLeft = "250px";
+                body.style.marginLeft = "250px";
+            } else {
+                sidebar.classList.add("closed");
+                container.style.marginLeft = "0";
+                body.style.marginLeft = "0";
+            }
+        }
+    </script>
+</body>
+
+</html>

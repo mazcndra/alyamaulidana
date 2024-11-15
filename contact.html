@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak Kami - Skincare Beauty</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+  <div class="sidebar closed" id="mySidebar">
+    <a href="Beranda.html">Beranda</a>
+    <a href="Produk.html">Produk</a>
+    <a href="contact.html">Contact</a>
+    <button class="login-btn">Login</button>
+  </div>
+
+  <div class="header-container">
+    <button class="open-btn" onclick="toggleSidebar()">☰</button>
+    <h1></h1>
+    <img src="img/LOGO KECANTIKAN_page-0001.jpg" alt="Logo Skincare Beauty">
+  </div>
+
+  <div class="content">
+    <h1>Kontak Kami</h1>
+    <p>Jika Anda memiliki pertanyaan atau ingin menghubungi kami, silakan isi formulir di bawah ini:</p>
+    <form action="submit_contact.php" method="post">
+      <label for="name">Nama:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Pesan:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Kirim</button>
+    </form>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("mySidebar");
+      const content = document.querySelector(".content");
+      const body = document.body;
+      if (sidebar.classList.contains("closed")) {
+        sidebar.classList.remove("closed");
+        content.style.marginLeft = "250px";
+        body.style.marginLeft = "250px";
+      } else {
+        sidebar.classList.add("closed");
+        content.style.marginLeft = "0";
+        body.style.marginLeft = "0";
+      }
+    }
+  </script>
+</body>
+
+</html>
